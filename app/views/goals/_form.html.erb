@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>New goal Activity</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Users/nataliamarkova/Code_The_Dream/lessons/goal-planner/app/views/lives/css/custom.css">
+  </head>
+  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
+  
+    <!-- Page Content -->
+    
+    <div class="container">
+    <div class="page">
+      <div class="page-content">
+        <%= form_for(goal) do |f| %>
+          <% if goal.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(goal.errors.count, "error") %> prohibited this goal from being saved:</h2>
+              <ul>
+              <% goal.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+            <div class="col-sm-8 form-control">
+              <div class="item-title item-label"> 
+                  <%= f.label :create_goal %>
+              </div>
+              <div class="item-title item-label">
+                  <%= f.text_field :create_goal %>
+              </div>
+            </div>
+
+            <div class="col-sm-8 form-control">
+              <div class="item-title item-label"> 
+                  <%= f.label :lives_id %>
+              </div>
+              <div class="item-title item-label">
+                  <%= f.text_field :lives_id %>
+              </div>
+            </div>
+
+            <div class="col-sm-8 form-control">
+              <div class="item-title item-label"> 
+                  <%= f.label :start_date %>
+              </div>
+              <div class="item-title item-label">
+                <%= f.date_select :start_date, start_year: 2000, end_year: Time.now.year %>
+                <p class="small i">Define the date when you want to work on the goal</p>
+              </div>
+            </div>
+
+            <div class="col-sm-8 form-control">
+              <div class="item-title item-label"> 
+                <%= f.label :end_date %>
+              </div>
+              <div>
+                <%= f.date_select :end_date, start_year: 2000, end_year: 2050%>
+                <p class="small i">Define the date when you want to reach the goal</p>
+              </div>
+            </div>
+
+            <div class="col-sm-8 form-control">
+              <div class="item-title item-label"> 
+                  <%= f.label :achieved %>
+
+
+                  <%= form_for @goal do |f| %><br>
+                    <%= f.radio_button :achieved, "The goal should be achieved on time" %>The goal should be achieved on time<br/>
+                    <%= f.radio_button :achieved, "The goal should be achieved in time" %>The goal should be achieved in time<br/>
+                    <%= f.radio_button :achieved, "An achievement of the goal may be delayed" %>An achievement of the goal may be delayed<br/>
+                    <%= f.hidden_field :achieved  %>
+                  <% end %>
+              </div>
+            </div>
+
+            <div class="col-sm-8 form-control">
+              <div class="item-title item-label"> 
+                  <%= f.label :note_goal %>
+              </div>
+              <p class="small i">Leave notes for the goal you want to reach</p>
+              <div class="item-title item-label">
+                  <%= f.text_field :note_goal %>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Create</button>
+              <button type="button" class="btn"><%= link_to 'Cancel', lives_path %></button>
+            </div>
+    			</div>
+        <% end %>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
+
+  

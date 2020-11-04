@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  life_category: MyString
+  life_name: MyString
+  life_activity: MyText
+
+two:
+  life_category: MyString
+  life_name: MyString
+  life_activity: MyText

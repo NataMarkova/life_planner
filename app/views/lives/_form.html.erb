@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>New Life Activity</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Users/nataliamarkova/Code_The_Dream/lessons/life-planner/app/views/lives/css/custom.css">
+  </head>
+  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
+  
+    <!-- Page Content -->
+    
+    <div class="container">
+    <div class="page">
+      <div class="page-content">
+        <%= form_for(life) do |f| %>
+          <% if life.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(life.errors.count, "error") %> prohibited this order from being saved:</h2>
+              <ul>
+              <% life.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+
+            <div class="col-sm-8 form-control">
+              <div class="item-title item-label">
+              <p class="small">Select one of the life category you want to create event for</p>
+                <%= f.label :life_category %>
+              <%= f.select(:life_category, options_for_select([
+                ['To Do’s', 'To Do’s'], 
+                ['Money', 'Money'], 
+                ['Events', 'Events'], 
+                ['Routines', 'Routines'], 
+                ['Food', 'Food'], 
+                ['Travel', 'Travel'], 
+                ['Home', 'Home'], 
+                ['Me', 'Me'], 
+                ['Emergency', 'Emergency'], 
+                ['Contacts', 'Contacts'], 
+                ['Holidays', 'Holidays'], 
+                ['Misc', 'Misc']]), { include_blank: true }) %>
+              </select>
+              </div>
+            </div>
+
+
+            <div class="col-sm-8 form-control">
+              <div class="item-title item-label"> 
+                  <%= f.label :life_name %>
+              </div>
+              <div class="item-title item-label">
+                  <%= f.text_field :life_name %>
+              </div>
+            </div>
+
+            <div class="col-sm-8 form-control">
+              <div class="item-title item-label"> 
+                  <%= f.label :life_activity %>
+              </div>
+              <p class="small i">Leave notes for the life event you want to reach</p>
+              <div class="item-title item-label">
+                  <%= f.text_field :life_activity %>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Create</button>
+              <button type="button" class="btn"><%= link_to 'Cancel', lives_path %></button>
+            </div>
+    			</div>
+        <% end %>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
+
+  

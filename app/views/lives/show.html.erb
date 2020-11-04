@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Life category:</strong>
+  <%= @life.life_category %>
+</p>
+<p>
+  <strong>Life action:</strong>
+  <%= @life.life_name %>
+</p>
+
+<p>
+  <strong>Life activity in more details:</strong>
+  <%= @life.life_activity%>
+</p>
+
+
+
+<%= link_to 'Edit', edit_life_path(@life) %> |
+<%= link_to 'Back', lives_path %>
+<%= link_to 'Show', life_path(@life) %>
