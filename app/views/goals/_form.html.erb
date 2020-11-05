@@ -15,19 +15,19 @@
     <!-- Page Content -->
     
     <div class="container">
-    <div class="page">
-      <div class="page-content">
-        <%= form_for(goal) do |f| %>
-          <% if goal.errors.any? %>
-            <div id="error_explanation">
-              <h2><%= pluralize(goal.errors.count, "error") %> prohibited this goal from being saved:</h2>
-              <ul>
-              <% goal.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-              <% end %>
-              </ul>
-            </div>
-          <% end %>
+      <div class="page">
+        <div class="page-content">
+          <%= form_for (@goal) do |f| %>
+            <% if @goal.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@goal.errors.count, "error") %> prohibited this goal from being saved:</h2>
+                <ul>
+                <% @goal.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
 
             <div class="col-sm-8 form-control">
               <div class="item-title item-label"> 
@@ -53,7 +53,7 @@
               </div>
               <div class="item-title item-label">
                 <%= f.date_select :start_date, start_year: 2000, end_year: Time.now.year %>
-                <p class="small i">Define the date when you want to work on the goal</p>
+                <p class="small i">Define the date when you want to start working on the goal</p>
               </div>
             </div>
 
@@ -91,14 +91,13 @@
               </div>
             </div>
 
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary">Create</button>
-              <button type="button" class="btn"><%= link_to 'Cancel', lives_path %></button>
+            <div class="col-sm-8 form-control">
+              <%= f.submit 'Create', class: "btn" %>
+              <%= link_to 'Cancel', goals_path %>
             </div>
-    			</div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
-    </div>
     </div>
   </body>
 </html>
