@@ -17,7 +17,7 @@
     <p id="notice"><%= notice %></p>
 
     <!--jumbotron-->
-    <h1 class = "jumbotron"> The list of my goals </h1>
+    <h1 class = "jumbotron"> The List of My Goals </h1>
     <!--/jumbotron-->
 
     <div class="media">
@@ -43,7 +43,7 @@
                 <%= goal.note_goal %>
                 <td><%= link_to 'Show', goal %></td>
                 <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
-                <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to 'Delete', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>
             <% end %>
           </tbody>
@@ -53,5 +53,5 @@
   </body>
 </html>
 
-<button type="button" class="btn btn-outline-primary"><%= link_to 'New Goal', new_goal_path %></button>
+<button type="button" class="btn btn-outline-primary"><%= link_to 'Create New Goal', new_goal_path %></button>
 

@@ -31,19 +31,21 @@
 
             <div class="col-sm-8 form-control">
               <div class="item-title item-label"> 
-                  <%= f.label :create_goal %>
+                <p>Set a goal that you want to achieve</p>
               </div>
               <div class="item-title item-label">
                   <%= f.text_field :create_goal %>
+                  <p class="small">Make sure your goal is clear and reachable</p>
               </div>
             </div>
 
             <div class="col-sm-8 form-control">
               <div class="item-title item-label"> 
-                  <%= f.label :lives_id %>
+                  <p>Choose task or activity that you created previously</p>
               </div>
               <div class="item-title item-label">
                   <%= f.text_field :lives_id %>
+                  <p class="small">Link a goal with task or activity</p>
               </div>
             </div>
 
@@ -69,9 +71,7 @@
 
             <div class="col-sm-8 form-control">
               <div class="item-title item-label"> 
-                  <%= f.label :achieved %>
-
-
+                <p>Select one of the options you would like to keep in mind reaching a goal </p>
                   <%= form_for @goal do |f| %><br>
                     <%= f.radio_button :achieved, "The goal should be achieved on time" %>The goal should be achieved on time<br/>
                     <%= f.radio_button :achieved, "The goal should be achieved in time" %>The goal should be achieved in time<br/>
@@ -83,18 +83,19 @@
 
             <div class="col-sm-8 form-control">
               <div class="item-title item-label"> 
-                  <%= f.label :note_goal %>
+                  <p>Notes & Ideas</p>
               </div>
-              <p class="small i">Leave notes for the goal you want to reach</p>
               <div class="item-title item-label">
                   <%= f.text_field :note_goal %>
+                  <p class="small">Leave notes for a goal you want to reach</p>
               </div>
             </div>
-
-            <div class="col-sm-8 form-control">
-              <%= f.submit 'Create', class: "btn" %>
-              <%= link_to 'Cancel', goals_path %>
+            
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Create</button>
+              <button type="button" class="btn"><%= link_to 'Cancel', goals_path %></button>
             </div>
+
           <% end %>
         </div>
       </div>

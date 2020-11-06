@@ -14,6 +14,7 @@
   
     <!-- Page Content -->
     
+    
     <div class="container">
     <div class="page">
       <div class="page-content">
@@ -32,50 +33,50 @@
 
             <div class="col-sm-8 form-control">
               <div class="item-title item-label">
-              <p class="small">Select one of the life category you want to create event for</p>
-                <%= f.label :life_category %>
-              <%= f.select(:life_category, options_for_select([
-                ['To Do’s', 'To Do’s'], 
-                ['Money', 'Money'], 
-                ['Events', 'Events'], 
-                ['Routines', 'Routines'], 
-                ['Food', 'Food'], 
-                ['Travel', 'Travel'], 
-                ['Home', 'Home'], 
-                ['Me', 'Me'], 
-                ['Emergency', 'Emergency'], 
-                ['Contacts', 'Contacts'], 
-                ['Holidays', 'Holidays'], 
-                ['Misc', 'Misc']]), { include_blank: true }) %>
-              </select>
-              </div>
-            </div>
-
-
-            <div class="col-sm-8 form-control">
-              <div class="item-title item-label"> 
-                  <%= f.label :life_name %>
+                <p>Life category</p>
               </div>
               <div class="item-title item-label">
-                  <%= f.text_field :life_name %>
+                <%= f.select(:life_category, options_for_select([
+                  ['To Do’s', 'To Do’s'], 
+                  ['Money', 'Money'], 
+                  ['Events', 'Events'], 
+                  ['Routines', 'Routines'], 
+                  ['Food', 'Food'], 
+                  ['Travel', 'Travel'], 
+                  ['Home', 'Home'], 
+                  ['Me', 'Me'], 
+                  ['Emergency', 'Emergency'], 
+                  ['Contacts', 'Contacts'], 
+                  ['Holidays', 'Holidays'], 
+                  ['Misc', 'Misc']]), { include_blank: true }) %>
+                </select>
+                <p class="small">Select the Life category you want to plan</p>
+              </div>
+            </div>
+
+
+            <div class="col-sm-8 form-control">
+              <div class="item-title item-label">
+                <p>Task or activity that you want to accomplish</p>
+                <%= f.text_field :life_name %>
+                <p class="small">Write a task or activity within the chosen Life category</p>
               </div>
             </div>
 
             <div class="col-sm-8 form-control">
               <div class="item-title item-label"> 
-                  <%= f.label :life_activity %>
+                <p>Notes & Ideas</p>
               </div>
-              <p class="small i">Leave notes for the life event you want to reach</p>
               <div class="item-title item-label">
                   <%= f.text_field :life_activity %>
+                  <p class="small">Leave notes and ideas that help you to complete task</p>
               </div>
             </div>
             <div class="form-actions">
               <button type="submit" class="btn btn-primary">Create</button>
               <button type="button" class="btn"><%= link_to 'Cancel', lives_path %></button>
             </div>
-    			</div>
-        <% end %>
+    		<% end %>
       </div>
     </div>
     </div>

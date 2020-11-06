@@ -1,21 +1,54 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
 
-<p>
-  <strong>Life category:</strong>
-  <%= @life.life_category %>
-</p>
-<p>
-  <strong>Life action:</strong>
-  <%= @life.life_name %>
-</p>
+<html lang="en">
+  <head>
+    <title>New goal Activity</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<p>
-  <strong>Life activity in more details:</strong>
-  <%= @life.life_activity%>
-</p>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Users/nataliamarkova/Code_The_Dream/lessons/goal-planner/app/views/lives/css/custom.css">
+  </head>
+  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
+  
+    <!-- Page Content -->
+
+    <p id="notice"><%= notice %></p>
+
+    <!--jumbotron-->
+    <h1 class = "jumbotron"> Recently Created Task </h1>
+    <!--/jumbotron-->
+
+    <div class="media">
+      <div class="media-body">
+        <div>
+          <strong>Life category:</strong>
+        </div>
+        <div>
+          <%= @life.life_category %>
+        </div>
+
+        <div>
+          <strong>Task or activity that you chose to accomplish:</strong>
+        </div>
+        <div>
+          <%= @life.life_name %>
+        </div>
+
+        <div>
+          <strong>Notes and ideas that help you to complete task:</strong>
+        </div>
+        <div>
+          <%= @life.life_activity%>
+        </div>
+          
+
+<button type="button" class="btn btn-outline-primary"><%= link_to 'Create new life task', new_life_path %></button>
+
+<button type="button" class="btn btn-outline"><%= link_to 'Edit', edit_life_path(@life) %></button>
+<button type="button" class="btn btn-outline"><%= link_to 'Back', lives_path %></button>
 
 
 
-<%= link_to 'Edit', edit_life_path(@life) %> |
-<%= link_to 'Back', lives_path %>
-<%= link_to 'Show', life_path(@life) %>

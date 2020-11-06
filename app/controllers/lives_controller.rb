@@ -18,15 +18,14 @@ class LivesController < ApplicationController
     end
 
     def create
-      # byebug
-        @life = Life.new(life_params)
-        if @life.save
-          flash.notice = "The life event record was created successfully."
-          redirect_to @life
-        else
-          flash.now.alert = @life.errors.full_messages.to_sentence
-          render :new  
-        end
+      @life = Life.new(life_params)
+      if @life.save
+        flash.notice = "The life event record was created successfully."
+        redirect_to @life
+      else
+        flash.now.alert = @life.errors.full_messages.to_sentence
+        render :new  
+      end
     end
 
     def update    
