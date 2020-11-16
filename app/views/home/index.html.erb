@@ -8,108 +8,169 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="stylesheets/application.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    
   </head>
+
   <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
+  <!-- Page Content -->
 
-<!-- Page Content -->
-
-<!--navbar-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        button type="button" class="btn btn-default btn-sm btn-margin-left">Button</button
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-link" href="#components">Life</a>
-          <a class="nav-link" href="#components">Goals</a>
-          <a class="nav-link" href="#components">Achievements</a>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          button type="button" class="btn btn-default btn-sm btn-margin-left">Button</button
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/lives">Life</a>
+            <a class="nav-link" href="/goals">Goals</a>
+            <a class="nav-link" href="/budgets">Budgets</a>
+          </div>
         </div>
       </div>
+    </nav>
+    <!--/navbar-->
+
+    <!--jumbotron-->
+    <div class="container">
+      <div class="text-gray text-center py-5 px-4">
+        <div>
+          <h1 class="display-1 text-center my-5 text-primary"><strong>Life Planner</strong></h1>
+          <h4 class="mx-5 mb-1 font-weight-bold font-italic">Manage your time, beautifully</h5>
+        </div>
+      </div> <!--/jumbotron-->
+      
+      <!-- Central part description -->
+      <div class="row">
+        <div class="col-md-8">
+          <img class="card-img-top" src="assets/user.jpg" alt="Planner">
+        </div>
+
+        <div class="col-md-4">
+          <h3 class="my-3 text-primary text-center">Planning mindfully: designing life with intention</h3>
+          <p class="text-sm-left">There are a lot of common, beneficial reasons why people use planners to keep their lives in check. Planners help you know what to expect, they help you set reasonable goals with achievable measurements, and you’ll never miss another deadline again. You may find though, that these obvious reasons aren’t enough to help you maintain a planner. Sometimes the unusual benefits of keeping a planner help you move forward more than the usual ones.</p>
+        </div>
+      </div> 
+
+        
+      <div>
+        <h3 class="my-3 text-primary text-center">Benefits you will get from using Life Planner:</h3>
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+              <div class="card-body">
+                <p class="plan card-text text-center">It helps With time management</p>
+              </div>
+            </div>
+          </div> 
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+              <div class="card-body">
+                <p class="plan card-text text-center">You can improve your productivity</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+              <div class="card-body">
+                <p class=" plan card-text text-center">It provides excellent stress relief</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+              <div class="card-body">
+                <p class="plan card-text text-center">More time for creative activities</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+              <div class="card-body">
+                <p class=" plan card-text text-center">You will learn more about your behavior</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+              <div class="card-body">
+                <p class=" plan card-text text-center">A place for your activity records</p>
+              </div>
+            </div>
+          </div>
+          
+          <!--Life components-->
+          <h1 id="components" class="col-md-12 text-center my-5 text-primary">Life Planner Components</h1>
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Life Planner</h5>
+                  <p class="card-text font-italic">“A clear vision, backed by definite plans, gives you a tremendous feeling of confidence and personal power.” ~&nbsp;Brian Tracy </p>
+                </div>
+                <button type="button" class="btn btn-outline-primary"><%= link_to "Let's get started", lives_path%></button>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card text-center h-100"> 
+                <div class="card-body">
+                  <h5 class="card-title text-center">Life Goals</h5>
+                  <p class="card-text font-italic">“If you are bored with life, if you don’t get up every morning with a burning desire to do things – you don’t have enough goals.” ~&nbsp;Lou Holtz</p>
+                </div>
+                <button type="button" class="btn btn-outline-primary"><%= link_to "Let's get started", goals_path%></button>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Budgets</h5>
+                  <p class="card-text font-italic">“All great achievements require time.” ~&nbsp;Maya Angelou</p>
+                </div>
+                <button type="button" class="btn btn-outline-primary"><%= link_to "Let's get started", goals_path%></button>
+              </div>
+            </div>
+          </div> <!--/Life components-->
+        </div> <!-- /Central part description -->
+      </div>
     </div>
-  </nav>
-  <!--/navbar-->
-
-<div class="container">
-
-<!--jumbotron-->
-  <div class="text-gray text-center py-5 px-4">
-    <div>
-      <h1 class="display-4 text-center my-5 text-muted"><strong>Life Planner</strong></h1>
-      <h5 class="mx-5 mb-1">Manage your time, beautifully</h5>
-    </div>
-  </div>
-<!--jumbotron-->
-
-<!-- Central part description -->
-  <div class="row">
-    <div class="col-md-8">
-      <img class="card-img-top" src="assets/user.jpg" alt="Planner">
-
-    </div>
+  <!-- /Page Content -->
+  <!-- Footer -->
+  <footer class="bd-footer text-muted" style="background-color: #e3f2fd; margin-top: 100px; padding-top: 20px;">
 
     <div class="col-md-4">
-      <h3 class="my-3 text-muted">Planning mindfully: designing life with intention</h3>
-      <p>There are a lot of common, beneficial reasons why people use planners to keep their lives in check. Planners help you know what to expect, they help you set reasonable goals with achievable measurements, and you’ll never miss another deadline again. You may find though, that these obvious reasons aren’t enough to help you maintain a planner. Sometimes the unusual benefits of keeping a planner help you move forward more than the usual ones.</p>
-      <h3 class="my-3 text-muted">Benefits you have got from using Life Planner:</h3>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">It Helps With Time Management</li>
-        <li class="list-group-item">You Can Improve Your Productivity</li>
-        <li class="list-group-item">It Provides Excellent Stress Relief</li>
-        <li class="list-group-item">More Time for Creative Activities</li>
-        <li class="list-group-item">You will learn more about your behavior</li>
-      </ul>
+      <div class="social-icons" style="margin-left: 20px;"> 
+        <a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x" style="width: 70px;"></i></a>
+        <a href="https://www.linkedin.com/feed/?trk=homepage-basic_google-one-tap-submit"><i id="social-in" class="fa fa-linkedin-square fa-3x social" style="width: 70px;"></i></a>
+        <a href="mailto:nataliamarkovabox@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+      </div>
     </div>
-  </div>
-<!-- /Central part description -->
 
-<!--components-->
-  <h1 id="components" class="display-7 text-center my-5 text-muted">Life Planner Components</h1>
-  <div id="about" class="row">
-    <div class="col-md-6 col-lg-4">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Life Planner</h5>
-          <p class="card-text">“A clear vision, backed by definite plans, gives you a tremendous feeling of confidence and personal power.” ~&nbsp;Brian Tracy </p>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <button type="button" class="btn btn-default btn-sm btn-margin-left"><%= link_to "Let's get started", new_life_path%></button>
-          </button>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="copyright-text" style="margin-left: 20px;">
+          <p>CopyRight © 2020 Natalia Markova</p>
         </div>
       </div>
-    </div>
-    
-    <div class="col-md-6 col-lg-4">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Life Goals</h5>
-          <p class="card-text">“If you are bored with life, if you don’t get up every morning with a burning desire to do things – you don’t have enough goals.” ~&nbsp;Lou Holtz</p>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-             <button type="button" class="btn btn-default btn-sm btn-margin-left"><%= link_to "Let's get started", new_goal_path%></button>
-          </div>
+      <div class="col-sm-6">
+        <div class="copyright-text pull-right" style="margin-right: 20px;">
+          <p> <a href="#">Home</a> | <a href="/lives">Life</a> |<a href="/goals">Goals</a> | <a href="/budgets">Budgets</a> </p>
+        </div>					
       </div>
     </div>
+  </footer><!-- /Footer -->
   
-    <div class="col-md-6 col-lg-4">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Achievements</h5>
-          <p class="card-text">“All great achievements require time.” ~&nbsp;Maya Angelou</p>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <button type="button" class="btn btn-default btn-sm btn-margin-left"><%= link_to "Let's get started", new_life_path%></button>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-<!--components-->
+  </body>
+</html>
 
-</div>
-<!-- /Page Content -->
+
 
     

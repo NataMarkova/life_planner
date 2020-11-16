@@ -10,46 +10,43 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="/Users/nataliamarkova/Code_The_Dream/lessons/goal-planner/app/views/lives/css/custom.css">
   </head>
-  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
+  <body>
   
     <!-- Page Content -->
 
-    <p id="notice"><%= notice %></p>
-
     <!--jumbotron-->
-    <h1 class = "jumbotron"> List of My lLife Tasks and Activities </h1>
+    <h1 class = "jumbotron"> List of My Life Tasks and Activities </h1>
     <!--/jumbotron-->
-
     
-
-    <div class="media">
-      <div class="media-body">
-        <table class="table table-hover">
+    <!--table-->
+    <div class="container">
+      <div class="row col-lg-12">
+        <table class="table table-striped custab">
           <thead>
             <tr>
-              <th>Life category</th>
-              <th>Task or activity that you want to accomplish</th>
-              <th>Notes</th>
+              <th class="text-center">Life category</th>
+              <th class="text-center">Task or activity</th>
+              <th class="text-center">Notes</th>
+              <th class="text-center">Action</th>
             </tr>
           </thead>
-        
           <tbody>
             <% @lives.each do |life| %>
               <tr>
                 <td><%= life.life_category %></td>
                 <td><%= life.life_name %></td>
                 <td><%= life.life_activity %></td>
-                <td><%= link_to 'Show', life %></td>
-                <td><%= link_to 'Edit', edit_life_path(life) %></td>
-                <td><%= link_to 'Delete', life, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td class="text-center"><button type="button" class="btn btn-outline-primary"><%= link_to 'Show', life %></button>
+                <td class="text-center"><button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_life_path(life) %></button>
+                <td class="text-center"><button type="button" class="btn btn-outline-primary"><%= link_to 'Delete', life, method: :delete, data: { confirm: 'Are you sure?' } %></button>
               </tr>
             <% end %>
           </tbody>
-        </table>
+        </table> <!--/table-->
+        <button class="btn btn-outline-primary"><b>+</b> <%= link_to 'Create New Life Task', new_life_path %></button>
       </div>
     </div>
   </body>
 </html>
 
-<button type="button" class="btn btn-outline-primary"><%= link_to 'Create New Life Task', new_life_path %></button>
-
+           

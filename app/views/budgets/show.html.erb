@@ -2,7 +2,7 @@
 
 <html lang="en">
   <head>
-    <title>New goal Activity</title>
+    <title>Budget</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,51 +18,39 @@
     <p id="notice"><%= notice %></p>
 
     <!--jumbotron-->
-    <h1 class = "jumbotron"> Recently Created Goal </h1>
+    <h1 class = "jumbotron"> Recently Created Budget </h1>
     <!--/jumbotron-->
 
     <div class="media">
       <div class="media-body">
         <div>
-          <strong>Created goal:</strong>
+          <strong>Budget amount</strong>
         </div>
         <div>
-          <%= @goal.create_goal %>
-        </div>
-
-        <div>
-          <strong>Start date:</strong>
-        </div>
-        <div>
-          <%= @goal.start_date %>
+          <%= @budget.expected_incom_amount %>
         </div>
 
         <div>
-          <strong>End date:</strong>
+          <strong>Actual amount</strong>
         </div>
         <div>
-          <%= @goal.end_date%>
-        </div>
-
-        <div>
-          <strong>Does your goal achieved?</strong>
-        </div>
-        <div>
-          <%= @goal.achieved%>
+          <%= @budget.actual_income_amount %>
         </div>
 
         <div>
-          <strong>Notes for the goal:</strong>
+
+        <div>
+          <strong>Difference</strong>
         </div>
         <div>
-          <%= @goal.note_goal%>
+          <%= @budget.actual_diff%>
         </div>
           
 
-<button type="button" class="btn btn-outline-primary"><%= link_to 'Create new goal', new_goal_path %></button>
+<button type="button" class="btn btn-outline-primary"><%= link_to 'Create new budget', new_budget_path %></button>
 
-<button type="button" class="btn btn-outline"><%= link_to 'Edit', edit_goal_path(@goal) %></button>
-<button type="button" class="btn btn-outline"><%= link_to 'Back', goals_path %></button>
+<button type="button" class="btn btn-outline"><%= link_to 'Edit', edit_budget_path(@budget) %></button>
+<button type="button" class="btn btn-outline"><%= link_to 'Back', budgets_path %></button>
 
 
 

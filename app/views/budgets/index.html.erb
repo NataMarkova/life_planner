@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Create New Budget</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Users/nataliamarkova/Code_The_Dream/lessons/goal-planner/app/views/lives/css/custom.css">
+  </head>
+  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
+  
+    <!-- Page Content -->
+
+    <p id="notice"><%= notice %></p>
+
+    <!--jumbotron-->
+    <h1 class = "jumbotron"> Budget </h1>
+    <!--/jumbotron-->
+
+
+    <!--table-->
+    <div class="container">
+      <div class="col-lg-12">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+                <th class="text-center">Task or activity</th>  
+                <th class="text-center">Budget amount</th>
+                <th class="text-center">Actual amount</th>
+                <th class="text-center">Difference</th>
+                <th class="text-center">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% @budgets.each do |budget| %>
+            <tr>
+                <td><%= budget.lives_id %></td>    
+                <td><%= budget.expected_incom_amount %></td>
+                <td><%= budget.actual_income_amount %></td>
+                <td><%= budget.actual_diff %></td>
+                <td class="text-center"><button type="button" class="btn btn-outline-primary"><%= link_to 'Show', budget %></button>
+                <td class="text-center"><button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_budget_path(budget) %></button>
+                <td class="text-center"><button type="button" class="btn btn-outline-primary"><%= link_to 'Delete', budget, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+            </tr>
+          <% end %>
+          </tbody>
+        </table> <!--/table-->
+        <button class="btn btn-outline-primary"><b>+</b><%= link_to 'Create New Budget', new_budget_path %></button>
+      </div>
+    </div>
+  </body>
+</html>

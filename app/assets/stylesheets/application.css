@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ .plan {
+    padding: 10px;
+    margin: 10px;
+    color: #fff;
+    background-color: #f19b62;
+    border-radius: 5px;
+  }

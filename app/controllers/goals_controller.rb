@@ -41,7 +41,7 @@ class GoalsController < ApplicationController
     def destroy
       @goal.destroy
       respond_to do |format|
-        format.html { redirect_to lgoals_url, notice: 'Goal event was successfully deleted.' }
+        format.html { redirect_to goals_url, notice: 'Goal event was successfully deleted.' }
         format.json { head :no_content }
       end
     end
