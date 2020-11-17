@@ -1,15 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  expected_income: MyString
   expected_income_amount: 1
   actual_income_amount: 1
   actual_diff: 1
-  lives: one
+  life: one
 
 two:
-  expected_income: MyString
   expected_income_amount: 1
   actual_income_amount: 1
   actual_diff: 1
-  lives: two
+  life: two

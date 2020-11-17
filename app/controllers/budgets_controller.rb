@@ -4,7 +4,7 @@ class BudgetsController < ApplicationController
     layout 'budget_layout'
 
     def index
-        @budgets = Budget.all.includes(:lives)
+        @budgets = Budget.all
     end
 
     def show

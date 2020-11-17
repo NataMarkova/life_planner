@@ -9,49 +9,42 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="/Users/nataliamarkova/Code_The_Dream/lessons/goal-planner/app/views/lives/css/custom.css">
   </head>
   <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
   
-    <!-- Page Content -->
+  <!-- Page Content -->
+    
+  <p id="notice"><%= notice %></p>
+  <!--jumbotron-->
+  <h1 class = "jumbotron"> Recently Created Task </h1>
+  <!--/jumbotron-->
 
-    <p id="notice"><%= notice %></p>
-
-    <!--jumbotron-->
-    <h1 class = "jumbotron"> Recently Created Budget </h1>
-    <!--/jumbotron-->
-
-    <div class="media">
-      <div class="media-body">
-        <div>
-          <strong>Budget amount</strong>
-        </div>
-        <div>
-          <%= @budget.expected_income_amount %>
-        </div>
-
-        <div>
-          <strong>Actual amount</strong>
-        </div>
-        <div>
-          <%= @budget.actual_income_amount %>
-        </div>
-
-        <div>
-
-        <div>
-          <strong>Difference</strong>
-        </div>
-        <div>
-          <%= @budget.actual_diff%>
-        </div>
-          
-
-<button type="button" class="btn btn-outline-primary"><%= link_to 'Create new budget', new_budget_path %></button>
-
-<button type="button" class="btn btn-outline"><%= link_to 'Edit', edit_budget_path(@budget) %></button>
-<button type="button" class="btn btn-outline"><%= link_to 'Back', budgets_path %></button>
-
-
-
+  <div class="container">
+      <div class="row col-lg-12">
+      <!--table-->
+        <table class="table table-striped custab">
+          <thead>
+            <tr>
+              <th class="text-center">Budget amount:</th>
+              <th class="text-center">Actual amount:</th>
+              <th class="text-center">Difference:</th>
+              <th class="text-center">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <td class="text-center"><%= @budget.expected_income_amount %></td>
+            <td class="text-center"><%= @budget.actual_income_amount %></td>
+            <td class="text-center"><%= @budget.actual_diff %></td>
+            <td class="text-center"><button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_budget_path(@budget) %></button>
+            <td class="text-center"><button type="button" class="btn btn-outline-primary"><%= link_to 'Back', budgets_path %></button>
+          </tbody>
+        </table> <!--/table-->
+      </div>
+      <div>
+        <button type="button" class="btn btn-outline-primary"><%= link_to 'Create new budget', new_budget_path %></button>
+      </div>
+    </div>
+  </body>
+</html>
+    
 

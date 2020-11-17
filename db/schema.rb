@@ -10,21 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_17_014535) do
+ActiveRecord::Schema.define(version: 2020_11_17_030852) do
 
   create_table "budgets", force: :cascade do |t|
-    t.string "expected_income"
     t.integer "expected_income_amount"
     t.integer "actual_income_amount"
     t.integer "actual_diff"
-    t.integer "lives_id"
+    t.integer "life_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["lives_id"], name: "index_budgets_on_lives_id"
+    t.index ["life_id"], name: "index_budgets_on_life_id"
   end
 
   create_table "goals", force: :cascade do |t|
-    t.integer "lives_id"
+    t.integer "life_id"
     t.string "create_goal"
     t.date "start_date"
     t.date "end_date"
@@ -32,7 +31,7 @@ ActiveRecord::Schema.define(version: 2020_11_17_014535) do
     t.text "note_goal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["lives_id"], name: "index_goals_on_lives_id"
+    t.index ["life_id"], name: "index_goals_on_life_id"
   end
 
   create_table "lives", force: :cascade do |t|

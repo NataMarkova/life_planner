@@ -1,7 +1,8 @@
 class GoalsController < ApplicationController
-    rescue_from ActiveRecord::RecordNotFound, with: :catch_not_found
-    before_action :set_goal, only: [:show, :edit, :update, :destroy]
-    layout 'goal_layout'
+  ActiveRecord::Type::Boolean.new.achieved(value)
+  rescue_from ActiveRecord::RecordNotFound, with: :catch_not_found
+  before_action :set_goal, only: [:show, :edit, :update, :destroy]
+  layout 'goal_layout'
 
     def index
         @goals = Goal.all
@@ -55,7 +56,7 @@ class GoalsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def goal_params
-      params.require(:goal).permit(:lives_id, :create_goal, :start_date, :end_date, :achieved, :note_goal)
+      params.require(:goal).permit(:life_id, :create_goal, :start_date, :end_date, :achieved, :note_goal)
     end
 
     def catch_not_found(e)

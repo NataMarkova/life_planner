@@ -35,7 +35,7 @@
               </div>
 
               <div class="field">
-                <%= f.collection_select :lives_id, Life.all, :id, :life_name, include_blank: true %>
+                <%= f.collection_select :life_id, Life.all, :id, :life_name, include_blank: false %>
               </div>
             </div>
 

@@ -45,7 +45,7 @@
               </div>
 
               <div class="field">
-                <%= f.collection_select :lives_id, Life.all, :id, :life_name, include_blank: true %>
+                <%= f.collection_select :life_id, Life.all, :id, :life_name, include_blank: false %>
               </div>
             </div>
 
@@ -64,7 +64,7 @@
                 <b><%= f.label :end_date %></b>
               </div>
               <div>
-                <%= f.date_select :end_date, start_year: 2000, end_year: 2050%>
+                <%= f.date_select :end_date, start_year: 2015, end_year: 2030%>
                 <p class="small">Define the date when you want to reach the goal</p>
               </div>
             </div>

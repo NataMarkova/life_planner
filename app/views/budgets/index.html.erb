@@ -17,7 +17,7 @@
     <p id="notice"><%= notice %></p>
 
     <!--jumbotron-->
-    <h1 class = "jumbotron"> Budget </h1>
+    <h1 class = "jumbotron"> Task Budget </h1>
     <!--/jumbotron-->
 
 
@@ -35,9 +35,10 @@
             </tr>
           </thead>
           <tbody>
+
           <% @budgets.each do |budget| %>
             <tr>
-                <td><%= budget.life_id %></td>    
+                <td><%= budget.life.life_name %></td>
                 <td><%= budget.expected_income_amount %></td>
                 <td><%= budget.actual_income_amount %></td>
                 <td><%= budget.actual_diff %></td>
