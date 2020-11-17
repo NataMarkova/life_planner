@@ -37,8 +37,8 @@
           <tbody>
           <% @budgets.each do |budget| %>
             <tr>
-                <td><%= budget.lives_id %></td>    
-                <td><%= budget.expected_incom_amount %></td>
+                <td><%= budget.life_id %></td>    
+                <td><%= budget.expected_income_amount %></td>
                 <td><%= budget.actual_income_amount %></td>
                 <td><%= budget.actual_diff %></td>
                 <td class="text-center"><button type="button" class="btn btn-outline-primary"><%= link_to 'Show', budget %></button>

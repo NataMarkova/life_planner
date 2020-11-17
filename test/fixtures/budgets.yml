@@ -2,26 +2,14 @@
 
 one:
   expected_income: MyString
-  expected_incom_amount: 1
-  expected_expences: MyString
-  expected_expences_amount: 1
-  expected_diff: 1
-  actual_income: MyString
+  expected_income_amount: 1
   actual_income_amount: 1
-  actual_expences: MyString
-  actual_expences_amount: 1
   actual_diff: 1
   lives: one
 
 two:
   expected_income: MyString
-  expected_incom_amount: 1
-  expected_expences: MyString
-  expected_expences_amount: 1
-  expected_diff: 1
-  actual_income: MyString
+  expected_income_amount: 1
   actual_income_amount: 1
-  actual_expences: MyString
-  actual_expences_amount: 1
   actual_diff: 1
   lives: two

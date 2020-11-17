@@ -55,7 +55,7 @@ class BudgetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def budget_params
-      params.require(:budget).permit(:lives_id, :lives_name, :expected_income, :expected_incom_amount, :expected_expences, :expected_expences_amount, :expected_diff, :actual_income, :actual_income_amount, :actual_expences, :actual_expences_amount, :actual_diff)
+      params.require(:budget).permit(:life_id, :life_name, :expected_income, :expected_income_amount, :actual_income_amount, :actual_diff)
     end
 
     def catch_not_found(e)
