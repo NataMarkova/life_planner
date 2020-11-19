@@ -1,33 +1,57 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>New goal Activity</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<h1>Goals</h1>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Users/nataliamarkova/Code_The_Dream/lessons/goal-planner/app/views/lives/css/custom.css">
+  </head>
+  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
+  
+    <!-- Page Content -->
 
-<table>
-  <thead>
-    <tr>
-      <th>Create goal</th>
-      <th>Start date</th>
-      <th>End date</th>
-      <th>Achieved</th>
-      <th>Note goal</th>
-      <th colspan="5"></th>
-    </tr>
-  </thead>
+    <p id="notice"><%= notice %></p>
 
-  <tbody>
-    <% @goals.each do |goal| %>
-      <tr>
-        <td><%= goal.full_name %></td>
-        <td><%= goal.phone %></td>
-        <td><%= goal.email %></td>
-        <td><%= link_to 'Show', goal %></td>
-        <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
-        <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <!--jumbotron-->
+    <h1 class = "jumbotron"> List of My Goals </h1>
+    <!--/jumbotron-->
 
-<br>
 
-<%= link_to 'New Goal', new_goal_path %>
+    <!--table-->
+    <div class="container">
+      <div class="col-lg-12">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th class="text-center">Goal</th>
+              <th class="text-center">Start date</th>
+              <th class="text-center">End date</th>
+              <th class="text-center">Has the goal already achieved?</th>
+              <th class="text-center">Notes for this goal</th>
+              <th class="text-center">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% @goals.each do |goal| %>
+            <tr>
+              <td><%= goal.create_goal %></td>
+              <td><%= goal.start_date %></td>
+              <td><%= goal.end_date %></td>
+              <td class="text-center"><%= goal.achieved %></td>
+              <td><%= goal.note_goal %></td>
+              <td class="text-center"><button type="button" class="btn btn-outline-primary"><%= link_to 'Show', goal %></button>
+              <td class="text-center"><button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_goal_path(goal) %></button>
+              <td class="text-center"><button type="button" class="btn btn-outline-primary"><%= link_to 'Delete', goal, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+            </tr>
+          <% end %>
+          </tbody>
+        </table> <!--/table-->
+        <button class="btn btn-outline-primary"><b>+</b><%= link_to 'Create New Goal', new_goal_path %></button>
+      </div>
+    </div>
+  </body>
+</html>

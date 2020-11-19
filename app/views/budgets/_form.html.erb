@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Budgets</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Users/nataliamarkova/Code_The_Dream/lessons/goal-planner/app/views/lives/css/custom.css">
+  </head>
+  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
+  
+    <!-- Page Content -->
+    
+    <div class="container">
+      <div class="page">
+        <div class="page-content">
+          <%= form_for(@budget) do |f| %>
+            <% if budget.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(budget.errors.count, "budget") %> prohibited this budget from being saved:</h2>
+                <ul>
+                <% budget.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <div class="col-sm-8 form-control">
+              <div class="item-title item-label"> 
+                <b><p>Choose task or activity that you created previously<span>*</span></p></b>
+              </div>
+
+              <div class="field">
+                <%= f.collection_select :life_id, Life.all, :id, :life_name, include_blank: false %>
+              </div>
+            </div>
+
+            <div class="col-sm-8 form-control">
+              <div class="item-title item-label"> 
+                  <b><p>Budget amount, $<span>*</span></p></b>
+              </div>
+              <div class="item-title item-label">
+                  <%= f.text_field :expected_income_amount %>
+                  <p class="small">Expected amount that you are ready to spent for completing a task or activity created on the previous step </p>
+              </div>
+            </div>
+
+
+          <div class="col-sm-8 form-control">
+            <div class="item-title item-label"> 
+                <b><p>Actual amount, $<span>*</span></p></b>
+            </div>
+            <div class="item-title item-label">
+                <%= f.text_field :actual_income_amount %>
+                <p class="small">Actual amount that you have already spent for completing a task or activity created on the previous step (you can come back here later)</p>
+            </div>
+          </div>
+
+          <div class="col-sm-8 form-control">
+            <div class="item-title item-label"> 
+                <b><p>Difference, $<span>*</span></p></b>
+            </div>
+            <div class="item-title item-label">
+                <%= f.text_field :actual_diff %>
+                <p class="small">Actual amount - Budget</p>
+            </div>
+          </div>
+            
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Create</button>
+              <button type="button" class="btn"><%= link_to 'Cancel', budgets_path %></button>
+            </div>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+  

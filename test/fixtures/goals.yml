@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  lives: one
+  life: one
   create_goal: MyString
-  start_date: 2020-10-31
-  end_date: 2020-10-31
+  start_date: 2020-11-16
+  end_date: 2020-11-16
   achieved: false
   note_goal: MyText
 
 two:
-  lives: two
+  life: two
   create_goal: MyString
-  start_date: 2020-10-31
-  end_date: 2020-10-31
+  start_date: 2020-11-16
+  end_date: 2020-11-16
   achieved: false
   note_goal: MyText

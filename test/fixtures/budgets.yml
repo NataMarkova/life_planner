@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  expected_income_amount: 1
+  actual_income_amount: 1
+  actual_diff: 1
+  life: one
+
+two:
+  expected_income_amount: 1
+  actual_income_amount: 1
+  actual_diff: 1
+  life: two

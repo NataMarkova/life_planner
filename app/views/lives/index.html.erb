@@ -1,113 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Life Planner For You</title>
+    <title>New goal Activity</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="/Users/nataliamarkova/Code_The_Dream/lessons/goal-planner/app/views/lives/css/custom.css">
   </head>
-  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
-
-<!-- Page Content -->
-<div class="container">
-
-<!--navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-  <div class="container">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      button type="button" class="btn btn-default btn-sm btn-margin-left">Button</button
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-link" href="#components">Life</a>
-        <a class="nav-link" href="#components">Goals</a>
-        <a class="nav-link" href="#components">Achievements</a>
-      </div>
-    </div>
-  </div>
-</nav>
-<!--/navbar-->
-
-<!--jumbotron-->
-  <div class="text-gray text-center py-5 px-4">
-    <div>
-      <h1 class="display-4 text-center my-5 text-muted"><strong>Life Planner</strong></h1>
-      <h5 class="mx-5 mb-1">Manage your time, beautifully</h5>
-    </div>
-  </div>
-<!--jumbotron-->
-
-<!-- Central part description -->
-  <div class="row">
-    <div class="col-md-8">
-      <img class="card-img-top" src="app/assets/images/images.png" alt="Planner">
-    </div>
-
-    <div class="col-md-4">
-      <h3 class="my-3 text-muted">Planning mindfully: designing life with intention</h3>
-      <p>There are a lot of common, beneficial reasons why people use planners to keep their lives in check. Planners help you know what to expect, they help you set reasonable goals with achievable measurements, and you’ll never miss another deadline again. You may find though, that these obvious reasons aren’t enough to help you maintain a planner. Sometimes the unusual benefits of keeping a planner help you move forward more than the usual ones.</p>
-      <h3 class="my-3 text-muted">Benefits you have got from using Life Planner:</h3>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">It Helps With Time Management</li>
-        <li class="list-group-item">You Can Improve Your Productivity</li>
-        <li class="list-group-item">It Provides Excellent Stress Relief</li>
-        <li class="list-group-item">More Time for Creative Activities</li>
-        <li class="list-group-item">You will learn more about your behavior</li>
-      </ul>
-    </div>
-  </div>
-<!-- /Central part description -->
-
-<!--components-->
-  <h1 id="components" class="display-7 text-center my-5 text-muted">Life Planner Components</h1>
-  <div id="about" class="row">
-    <div class="col-md-6 col-lg-4">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Life Planner</h5>
-          <p class="card-text">“A clear vision, backed by definite plans, gives you a tremendous feeling of confidence and personal power.” ~&nbsp;Brian Tracy </p>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <button type="button" class="btn btn-default btn-sm btn-margin-left"><%= link_to "Let's get started", new_life_path%></button>
-          </button>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-md-6 col-lg-4">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Life Goals</h5>
-          <p class="card-text">“If you are bored with life, if you don’t get up every morning with a burning desire to do things – you don’t have enough goals.” ~&nbsp;Lou Holtz</p>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-             <button type="button" class="btn btn-default btn-sm btn-margin-left"><%= link_to "Let's get started", new_goal_path%></button>
-          </div>
-      </div>
-    </div>
+  <body>
   
-    <div class="col-md-6 col-lg-4">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Achievements</h5>
-          <p class="card-text">“All great achievements require time.” ~&nbsp;Maya Angelou</p>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <button type="button" class="btn btn-default btn-sm btn-margin-left"><%= link_to "Let's get started", new_life_path%></button>
-          </button>
-        </div>
+    <!-- Page Content -->
+
+    <!--jumbotron-->
+    <h1 class = "jumbotron"> List of My Life Tasks and Activities </h1>
+    <!--/jumbotron-->
+    
+    <!--table-->
+    <div class="container">
+      <div class="row col-lg-12">
+        <table class="table table-striped custab">
+          <thead>
+            <tr>
+              <th class="text-center">Life category</th>
+              <th class="text-center">Task or activity</th>
+              <th class="text-center">Notes</th>
+              <th class="text-center">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @lives.each do |life| %>
+              <tr>
+                <td><%= life.life_category %></td>
+                <td><%= life.life_name %></td>
+                <td><%= life.life_activity %></td>
+                <td class="text-center"><button type="button" class="btn btn-outline-primary"><%= link_to 'Show', life %></button>
+                <td class="text-center"><button type="button" class="btn btn-outline-primary"><%= link_to 'Edit', edit_life_path(life) %></button>
+                <td class="text-center"><button type="button" class="btn btn-outline-primary"><%= link_to 'Delete', life, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+              </tr>
+            <% end %>
+          </tbody>
+        </table> <!--/table-->
+        <button class="btn btn-outline-primary"><b>+</b> <%= link_to 'Create New Life Task', new_life_path %></button>
       </div>
     </div>
-  </div>
-<!--components-->
+  </body>
+</html>
 
-</div>
-<!-- /Page Content -->
-
-    
+           
