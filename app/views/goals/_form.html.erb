@@ -31,7 +31,7 @@
 
             <div class="col-sm-8 form-control">
               <div class="item-title item-label"> 
-              <b><p>Set a goal that you want to achieve</p></b>
+              <b><p>Set a goal that you want to achieve<span>*</span></p></b>
               </div>
               <div class="item-title item-label">
                   <%= f.text_field :create_goal %>
@@ -41,7 +41,7 @@
 
             <div class="col-sm-8 form-control">
               <div class="item-title item-label"> 
-                <b><p>Choose task or activity that you created previously</p></b>
+                <b><p>Choose task or activity that you created previously<span>*</span></p></b>
               </div>
 
               <div class="field">
@@ -51,7 +51,7 @@
 
             <div class="col-sm-8 form-control">
               <div class="item-title item-label"> 
-                <b><%= f.label :start_date %></b>
+                <b><%= f.label :start_date %></b><span>*</span>
               </div>
               <div class="item-title item-label">
                 <%= f.date_select :start_date, start_year: 2000, end_year: 2050 %>
@@ -61,7 +61,7 @@
 
             <div class="col-sm-8 form-control">
               <div class="item-title item-label"> 
-                <b><%= f.label :end_date %></b>
+                <b><%= f.label :end_date %></b><span>*</span>
               </div>
               <div>
                 <%= f.date_select :end_date, start_year: 2015, end_year: 2030%>
@@ -72,9 +72,7 @@
             <div class="col-sm-8 form-control">
               <div class="item-title item-label"> 
                 <p>
-                  <b><p>Has the goal already achieved?</p></b><br />
-                  <%= f.radio_button :achieved, 'Yes'%>Yes<br />
-                  <%= f.radio_button :achieved, 'Not yet'%>Not yet<br />
+                  <b><p><%= f.check_box :achieved %>  Has the goal already achieved?</p></b>
                 </p>
               </div>
             </div>

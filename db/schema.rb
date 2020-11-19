@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_11_17_030852) do
   create_table "lives", force: :cascade do |t|
     t.string "life_category"
     t.string "life_name"
-    t.string "life_activity"
+    t.text "life_activity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

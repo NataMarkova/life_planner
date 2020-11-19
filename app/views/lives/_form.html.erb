@@ -30,10 +30,9 @@
             </div>
           <% end %>
 
-
             <div class="col-sm-8 form-control">
               <div class="item-title item-label">
-                <p>Life category</p>
+                <p>Life category<span>*</span></p>
               </div>
               <div class="item-title item-label">
                 <%= f.select(:life_category, options_for_select([
@@ -50,14 +49,14 @@
                   ['Holidays', 'Holidays'], 
                   ['Misc', 'Misc']]), { include_blank: true }) %>
                 </select>
-                <p class="small">Select the Life category you want to plan</p>
+                <p class="small">Select the Life category that you want to plan</p>
               </div>
             </div>
 
 
             <div class="col-sm-8 form-control">
               <div class="item-title item-label">
-                <p>Task or activity that you want to accomplish</p>
+                <p>Task or activity that you want to accomplish<span>*</span></p>
                 <%= f.text_field :life_name %>
                 <p class="small">Write a task or activity within the chosen Life category</p>
               </div>
@@ -69,7 +68,7 @@
               </div>
               <div class="item-title item-label">
                   <%= f.text_field :life_activity %>
-                  <p class="small">Leave notes and ideas that help you to complete task</p>
+                  <p class="small">Leave notes and ideas that help you to complete the task</p>
               </div>
             </div>
             <div class="form-actions">
